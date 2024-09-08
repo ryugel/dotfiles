@@ -13,6 +13,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+vim.api.nvim_command("set clipboard=unnamedplus")
+
 
 require("keymaps")
 require("lazy").setup("plug")
